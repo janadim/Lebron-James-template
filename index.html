@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <title>Content Stadium Assignment</title>
+</head>
+<body class="body">
+    <header class="title">Canvas Assignment</header>
+    <div class="container">        
+        <canvas class="canvas" width="1024" height="576">
+        </canvas>
+        <canvas class="canvasText" width="1024" height="576">
+        </canvas>
+        <canvas class="canvasPlayer" width="1024" height="576">
+        </canvas>
+        <canvas class="canvasPlayerEffect" width="1024" height="576">
+        </canvas>
+    </div>
+    
+    <form class="form-container">
+        <p>Toggle alternative options:</p>
+        <div>
+        <input type="checkbox" class="bg" name="bg"
+                >
+        <label for="bg">Alternative background</label>
+        </div>
+        
+        <div>
+        <input type="checkbox" class="color" name="color">
+        <label for="color">Alternative text color</label>
+        </div>
+        <div>
+            <input type="checkbox" class="opacity" name="opacity">
+            <label for="opacity">Alternative player opacity</label>
+        </div>
+    </form>
+    
+    
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
