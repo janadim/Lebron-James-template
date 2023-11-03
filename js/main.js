@@ -4,10 +4,12 @@ const canvas = document.querySelector(".canvas");
 const canvasText = document.querySelector(".canvasText");
 const canvasPlayer = document.querySelector(".canvasPlayer");
 const canvasPlayerEffect = document.querySelector(".canvasPlayerEffect");
+// const canvasAnimation = document.querySelector(".canvasAnimation");
 const ctx = canvas.getContext("2d");
 const ctx2 = canvasText.getContext("2d");
 const ctx3 = canvasPlayer.getContext("2d");
 const ctx4 = canvasPlayerEffect.getContext("2d");
+// const ctx5 = canvasAnimation.getContext("2d");
 const pathImages = "./images/";
 const typeImages = ".png";
 let toggleColorText = 0;
@@ -185,13 +187,7 @@ const contentTemplate = [
     dy: 246,
     opacity: 1,
   },
-  {
-    type: "image",
-    path: pathImages + "logo" + typeImages,
-    dx: 81,
-    dy: 466,
-    opacity: 1,
-  },
+
   {
     type: "image",
     path: pathImages + "frameshadow" + typeImages,
@@ -259,6 +255,8 @@ window.onload = render();
 const bgSelector = document.querySelector(".bg");
 const colorSelector = document.querySelector(".color");
 const opacitySelector = document.querySelector(".opacity");
+const animationSelector = document.querySelector(".animation");
+// const containerAnimation = document.querySelector(".containerAnimation");
 const containerBg = document.querySelector(".container");
 
 function handleCheckboxBg() {
@@ -311,3 +309,40 @@ function handleCheckboxOpacity() {
   }
 }
 opacitySelector.addEventListener("change", handleCheckboxOpacity);
+
+// function handleCheckboxAnimation() {
+//   animationSelector.classList.toggle("canvasAnimation");
+//   let id = null;
+//   const elem = document.getElementById("canvasAnimation");
+//   let pos = 0;
+
+//   if (animationSelector.checked) {
+//     //   clearInterval(id);
+//     //   id = setInterval(frame, 5);
+//     //   function frame() {
+//     //     if (pos == 350) {
+//     //       clearInterval(id);
+//     //     } else {
+//     //       pos++;
+//     //       elem.style.top = pos + "px";
+//     //       elem.style.left = pos + "px";
+//     //     }
+//     //   }
+//     //Clear first the canvas
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     ctx2.clearRect(0, 0, canvasText.width, canvasText.height);
+//     ctx3.clearRect(0, 0, canvasPlayer.width, canvasPlayer.height);
+//     ctx4.clearRect(0, 0, canvasPlayerEffect.width, canvasPlayerEffect.height);
+//     //render the canvas again
+//     render();
+//   } else {
+//     //Clear first the canvas
+//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     ctx2.clearRect(0, 0, canvasText.width, canvasText.height);
+//     ctx3.clearRect(0, 0, canvasPlayer.width, canvasPlayer.height);
+//     ctx4.clearRect(0, 0, canvasPlayerEffect.width, canvasPlayerEffect.height);
+//     //render the canvas again
+//     render();
+//   }
+// }
+// animationSelector.addEventListener("change", handleCheckboxAnimation);
